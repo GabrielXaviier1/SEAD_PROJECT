@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCerto - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="Logo SEAD.png" alt="Logo SEAD" class="logo-small">
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="docentes.html"><i class="fas fa-user-tie"></i> Docentes</a></li>
+                <li><a href="horarios.html"><i class="fas fa-calendar-alt"></i> Grade Horária</a></li>
+                
+                <li class="logout">
+                    <a href="index.html" onclick="confirmarSair(event)">
+                        <i class="fas fa-sign-out-alt"></i> Sair
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <h1>Visão Geral</h1>
+            <section class="dashboard-cards" style="display: flex; gap: 20px;">
+                <div class="card" style="background: var(--azul-claro); color: white; padding: 20px; border-radius: 8px; flex: 1;">
+                    <h3>Docentes</h3><p>24 Cadastrados</p>
+                </div>
+                <div class="card" style="background: var(--azul-escuro); color: white; padding: 20px; border-radius: 8px; flex: 1;">
+                    <h3>Disciplinas</h3><p>18 Ativas</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function confirmarSair(event) {
+            event.preventDefault(); 
+            
+            if (confirm("Deseja realmente sair?")) {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="Logo SEAD.png" class="logo-small">
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="docentes.html" class="active"><i class="fas fa-user-tie"></i> Docentes</a></li>
+                <li><a href="horarios.html"><i class="fas fa-calendar-alt"></i> Grade Horária</a></li>
+                
+                <li class="logout">
+                    <a href="index.html" onclick="confirmarSair(event)">
+                        <i class="fas fa-sign-out-alt"></i> Sair
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>Gestão de Docentes</h2>
+                <button class="btn-main" style="width: auto; padding: 10px 20px;">+ Novo Docente</button>
+            </div>
+            <table class="styled-table">
+                <thead>
+                    <tr><th>ID</th><th>Nome</th><th>E-mail</th><th>Carga Horária</th><th>Ações</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>01</td><td>Dr. Arnaldo Souza</td><td>arnaldo@uniei.com</td><td>40h</td><td><button>Editar</button></td></tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script>
+        function confirmarSair(event) {
+            event.preventDefault(); 
+            if (confirm("Deseja realmente sair?")) {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
