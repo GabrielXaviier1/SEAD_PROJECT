@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>SEAD - Cadastro</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="auth-page">
-    <div class="auth-container">
-        <img src="Logo SEAD.png" alt="Logo SEAD" class="auth-logo">
-        <form>
-            <input type="text" placeholder="Nome Completo" required>
-            <input type="email" placeholder="E-mail Institucional" required>
-            <input type="password" placeholder="Senha" required>
-            <button type="button" class="btn-main" onclick="irParaDashboard()">Cadastrar</button>
-        </form>
-        <p>Já tem uma conta? <a href="#">Faça Login</a></p>
-    </div>
-
-    <script>
-        function irParaDashboard() {
-            window.location.href = "dashboard.html";
-        }
-    </script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
